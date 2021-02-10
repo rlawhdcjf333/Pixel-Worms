@@ -23,6 +23,8 @@ using namespace std;
 #include "ImageManager.h"
 #include "bkground.h"
 #include "cursor.h"
+#include "Camera.h"
+#include "command.h"
 
 extern POINT _mousePosition;	//마우스 좌표
 extern HWND	_hWnd;

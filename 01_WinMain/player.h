@@ -4,6 +4,7 @@ class projectile;
 
 class player
 {
+protected:
 	float mX;
 	float mY;
 	int mSpeed;
@@ -21,7 +22,7 @@ class player
 	vector <projectile*> mBullets;
 
 	bool mCooldown;
-
+	bool mIsTurnOver;
 
 public:
 	void Init();
@@ -29,9 +30,14 @@ public:
 	void Release();
 	void Update();
 
-	inline const float GetX() { return mX; }
-	inline const float GetY() { return mY; }
-	inline const float GetFiringPower() { return mFiringPower; }
+	inline bool GetTurnOver() { return mIsTurnOver; }
+	inline bool& GetCooldown() { return mCooldown; }
+	inline  vector <projectile*>& GetBullets() { return mBullets; }
+	inline float& GetX() { return mX; }
+	inline float& GetY() { return mY; }
+	inline float& GetFiringPower() { return mFiringPower; }
+	inline const int GetSpeed() { return mSpeed; }
+	inline void SetSpeed(int val) { mSpeed = val; }
 
 };
 

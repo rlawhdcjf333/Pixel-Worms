@@ -12,14 +12,14 @@ void projectile::Init()
 
 	rc = RectMakeCenter(mX, mY, mImage->GetFrameWidth(), mImage->GetFrameHeight());
 
-	mAngle = Math::GetAngle(mX, mY, _mousePosition.x, _mousePosition.y);
+	mAngle = Math::GetAngle(mX, mY, CAMERAX+_mousePosition.x, CAMERAY+_mousePosition.y);
 
 	IsCollision = false;
 }
 
 void projectile::Render(HDC hdc)
 {
-	mImage->FrameRender(hdc, rc.left, rc.top, mFrameX,mFrameY);
+	mImage->FrameRender(hdc, rc.left-CAMERAX, rc.top-CAMERAY, mFrameX,mFrameY);
 
 }
 

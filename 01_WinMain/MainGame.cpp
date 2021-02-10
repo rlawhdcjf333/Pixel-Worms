@@ -1,9 +1,7 @@
 #include "pch.h"
 #include "MainGame.h"
-#include "player.h"
+#include "playerManager.h"
 #include "Image.h"
-
-RECT back = RectMake(0, 0, WINSIZEX, WINSIZEY);
 
 /*
 Initialize : 초기화
@@ -17,13 +15,19 @@ void MainGame::Init()
 	mBackBuffer = new Image();
 	mBackBuffer->CreateEmpty(WINSIZEX, WINSIZEY);
 
-	IMAGEMANAGER->LoadFromFile(L"bkground", Resources(L"bkground.bmp"), WINSIZEX, WINSIZEY, true);
+	IMAGEMANAGER->LoadFromFile(L"back", Resources(L"back.bmp"), WINSIZEX * 2, WINSIZEY * 2, false);
+	IMAGEMANAGER->LoadFromFile(L"bkground", Resources(L"bkground.bmp"), WINSIZEX*2, WINSIZEY*2, true);
 	IMAGEMANAGER->LoadFromFile(L"player", Resources(L"player.bmp"), 60, 2160, 1, 36, true);
 	IMAGEMANAGER->LoadFromFile(L"dynamite", Resources(L"dynamite.bmp"), 60, 480, 1, 8, true);
 	IMAGEMANAGER->LoadFromFile(L"aim", Resources(L"aim.bmp"), 32,33, true);
 
-	mPlayer = new player();
-	mPlayer->Init();
+	mBack = IMAGEMANAGER->FindImage(L"back");
+
+	mPlayerList = new playerManager();
+	mPlayerList->Init();
+
+	Camera::GetInstance()->Init();
+
 }
 
 /*
@@ -39,8 +43,9 @@ void MainGame::Release()
 
 	SafeDelete(mBackBuffer);
 
-	mPlayer->Release();
-	SafeDelete(mPlayer);
+	mPlayerList->Release();
+
+	SafeDelete(mPlayerList);
 
 }
 
@@ -54,8 +59,9 @@ void MainGame::Update()
 	캐릭터가 포탄을 쏨, 포탄이 지면에 닿으면 지면이 파인다(둥글게)
 	*/
 	
-	mPlayer->Update();
-	
+	mPlayerList->Update();
+
+	Camera::GetInstance()->Update();
 	bkground::GetInstance()->Update();
 	cursor::GetInstance()->Update();
 }
@@ -75,17 +81,17 @@ void MainGame::Render(HDC hdc)
 	PatBlt(backDC, 0, 0, WINSIZEX, WINSIZEY, WHITENESS);
 	// ==================================================
 	{
-		HBRUSH newb = (HBRUSH)GetStockObject(LTGRAY_BRUSH);
-		HBRUSH oldb = (HBRUSH)SelectObject(backDC, newb);
-		RenderRect(backDC, back);
-		SelectObject(backDC, oldb);
-		DeleteObject(newb);
-
+		mBack->Render(backDC, -CAMERAX, -CAMERAY);
 		bkground::GetInstance()->Render(backDC);
 		cursor::GetInstance()->Render(backDC);
 
-		mPlayer->Render(backDC);
+		mPlayerList->Render(backDC);
 		
+		SetBkMode(backDC, OPAQUE);
+		wstring copyright = L"Copyright @ 광섭유니버스";
+		TextOut(backDC, 1100, 700, copyright.c_str(), copyright.size());
+
+
 	}
 	//====================================================
 	//후면버퍼 내용을 윈도우 창에 고속 복사

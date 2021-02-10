@@ -13,7 +13,7 @@ void player::Init()
 	mFiringPower = 15;
 	mSpeed = 3;
 	mCooldown = true;
-	cursor::GetInstance()->SetPlayer(this);
+	mIsTurnOver = false;
 
 	rc = RectMakeCenter(mX, mY, mImage->GetFrameWidth(), mImage->GetFrameHeight());
 
@@ -26,9 +26,9 @@ void player::Render(HDC hdc)
 {
 	SetBkMode(hdc, TRANSPARENT);
 	wstring power = to_wstring(mFiringPower);
-	TextOutW(hdc, rc.left, rc.top, power.c_str(), power.size());
+	TextOutW(hdc, rc.left-CAMERAX, rc.top-CAMERAY, power.c_str(), power.size());
 
-	mImage->ScaleFrameRender(hdc, rc.left, rc.top, mFrameX, mFrameY, mImage->GetFrameWidth(), mImage->GetFrameHeight());
+	mImage->ScaleFrameRender(hdc, rc.left-CAMERAX, rc.top-CAMERAY, mFrameX, mFrameY, mImage->GetFrameWidth(), mImage->GetFrameHeight());
 
 	for (projectile* elem : mBullets) {
 		elem->Render(hdc);
@@ -48,26 +48,13 @@ void player::Release()
 
 void player::Update()
 {
-	if (Input::GetInstance()->GetKey('W') && mFiringPower<100) mFiringPower+=0.25f;
-	if (Input::GetInstance()->GetKey('S') && mFiringPower>10) mFiringPower-=0.25f;
+	mIsTurnOver = false;
 
-	if (Input::GetInstance()->GetKey('A')) mX -= mSpeed;
-	if (Input::GetInstance()->GetKey('D')) mX += mSpeed;
+	if(command::GetInstance()->GetPlayer()==this)
+	command::GetInstance()->ExecuteCommand();
 
 	if (GetPixel(BKGROUND->GetHDC(), mX + 10, mY - 20) != RGB(255, 0, 255)) { mX -= mSpeed; }
 	if (GetPixel(BKGROUND->GetHDC(), mX - 10, mY-20) != RGB(255, 0, 255)) {mX += mSpeed;}
-
-
-	if (Input::GetInstance()->GetKeyDown(VK_LBUTTON) && mCooldown) {
-
-		projectile* bullet = new projectile();
-		bullet->SetPlayer(this);
-		bullet->Init();
-		bullet->SetVec(mFiringPower);
-		mBullets.push_back(bullet);
-
-		mCooldown = false;
-	}
 
 	for (projectile* elem : mBullets) {
 		elem->Update();
@@ -80,6 +67,7 @@ void player::Update()
 
 		SafeDelete(mBullets[0]);
 		vector<projectile*> ().swap(mBullets);
+		mIsTurnOver = true;
 	}
 
 
@@ -92,7 +80,7 @@ void player::Update()
 
 	if (GetPixel(BKGROUND->GetHDC(), mX, rc.bottom-20) == RGB(255, 0, 255)) {
 
-		mY +=3;
+		mY +=3; //사실 중력 아님 걍 등속 하강 중
 		rc = RectMakeCenter(mX, mY, mImage->GetFrameWidth(), mImage->GetFrameHeight());
 	}
 	else {

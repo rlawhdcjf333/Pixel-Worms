@@ -49,6 +49,15 @@
     <Filter Include="MainGame\bkground">
       <UniqueIdentifier>{b6a01fac-5d89-429d-9f26-305864782cba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FrameWork\Camera">
+      <UniqueIdentifier>{a7f12ec8-a0b8-4952-92ad-d13f6eee559f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\command">
+      <UniqueIdentifier>{fa2508f5-ad87-41fe-b56d-5047a55719c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\player\Manager">
+      <UniqueIdentifier>{4f24f4c7-28bc-4a1d-8697-b1e18fb49c4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -102,6 +111,15 @@
     <ClInclude Include="bkground.h">
       <Filter>MainGame\bkground</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>FrameWork\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>MainGame\command</Filter>
+    </ClInclude>
+    <ClInclude Include="playerManager.h">
+      <Filter>MainGame\player\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01_WinMain.cpp">
@@ -142,6 +160,15 @@
     </ClCompile>
     <ClCompile Include="bkground.cpp">
       <Filter>MainGame\bkground</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>FrameWork\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="command.cpp">
+      <Filter>MainGame\command</Filter>
+    </ClCompile>
+    <ClCompile Include="playerManager.cpp">
+      <Filter>MainGame\player\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

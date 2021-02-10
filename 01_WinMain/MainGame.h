@@ -2,13 +2,14 @@
 
 
 class Image;
-class player;
+class playerManager;
 
 class MainGame
 {
 	Image* mBackBuffer;	//후면버퍼(건들지마라)
+	Image* mBack;
 
-	player* mPlayer;
+	playerManager* mPlayerList;
 
 
 public:

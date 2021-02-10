@@ -1,8 +1,8 @@
 #pragma once
 #define WINSTARTX 50
 #define WINSTARTY 50
-#define WINSIZEX 800
-#define WINSIZEY 600
+#define WINSIZEX 1280
+#define WINSIZEY 720
 
 //인자로 들어온 p를 삭제하고 NULL로 초기화 하는 매크로 함수, 안전하게 삭제
 #define SafeDelete(p)\
@@ -31,3 +31,13 @@ protected: VarType VarName;\
 public: inline VarType Get##FuncName(void)const{return VarName;}\
 public: inline void Set##FuncName(VarType value){VarName = value;}
 
+
+#define CAMERAX Camera::GetInstance()->GetRc().left
+#define CAMERAY Camera::GetInstance()->GetRc().top
+
+#define setTurn(targetPtr)\
+{\
+cursor::GetInstance()->SetPlayer(targetPtr);\
+command::GetInstance()->SetPlayer(targetPtr);\
+Camera::GetInstance()->SetPlayer(targetPtr);\
+}

@@ -30,8 +30,12 @@ public:
 	void Release();
 	void Update();
 
-	inline const bool GetCollision() { return IsCollision; }
+	inline const float GetX() { return mX; }
+	inline const float GetY() { return mY; }
 
+
+	inline const bool GetCollision() { return IsCollision; }
+	
 	inline void SetPlayer(player* playerptr) { mPlayer = playerptr; }
 
 	inline float const GetVec() { return mVec; }
