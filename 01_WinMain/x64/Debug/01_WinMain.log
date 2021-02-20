@@ -1,0 +1,62 @@
+﻿  pch.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Figure.h(47,14): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Figure.h(48,15): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  01_WinMain.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\01_WinMain.cpp(114,16): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  bkground.cpp
+  Camera.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(10,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(10,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(30,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(30,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(41,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(41,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Camera.cpp(50,42): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  command.cpp
+  cursor.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\cursor.cpp(8,14): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\cursor.cpp(9,14): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\cursor.cpp(11,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\cursor.cpp(11,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\cursor.cpp(18,31): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\cursor.cpp(19,65): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Image.cpp
+  ImageManager.cpp
+  Input.cpp
+  MainGame + MainProc.cpp
+  MainGame.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\MainGame.cpp(92,65): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Math.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Math.cpp(39,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  player.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(18,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(18,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(29,76): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(56,47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(56,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(57,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(57,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(78,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(78,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(81,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(84,27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(84,23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(88,12): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(89,37): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\player.cpp(91,12): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  playerManager.cpp
+  projectile.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(13,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(13,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(15,67): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(15,41): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(37,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(37,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(42,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(42,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(50,41): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\projectile.cpp(50,37): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Random.cpp
+C:\Users\김종철\Documents\GitHub\Pixel-Worms\01_WinMain\Random.cpp(9,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  01_WinMain.vcxproj -> C:\Users\김종철\Documents\GitHub\Pixel-Worms\x64\Debug\01_WinMain.exe
